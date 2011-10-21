@@ -4,10 +4,13 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -25,11 +28,16 @@ public class MainActivity extends Activity {
 	private Timer tmr = new Timer();
 	private Timer tmr2 = new Timer();
 	private View dog, sideDog;
-    @Override
+	private MediaPlayer ladrido, fondoNoche, fondoDia;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        ladrido = MediaPlayer.create(this, R.raw.dog);
+        fondoNoche = MediaPlayer.create(this, R.raw.perronoche);
+        fondoNoche.start();
         
         final View img = (View)findViewById(R.id.ImageView1);
         dog=img;
@@ -50,7 +58,6 @@ public class MainActivity extends Activity {
 
 		delay = (long) r.nextInt(120000);
 		tmr.schedule(new TimerTask() {
-			@Override
 			public void run() {
 				randomAnimation(1);
 			}
@@ -83,7 +90,7 @@ public class MainActivity extends Activity {
     	switch(tmrNum){
     	case 1:
     		tmr2.schedule(new TimerTask() {
-    			@Override
+//    			@Override
     			public void run() {
     				randomAnimation(2);
     			}
@@ -91,7 +98,7 @@ public class MainActivity extends Activity {
     		break;
     	case 2:
     		tmr.schedule(new TimerTask() {
-    			@Override
+//    			@Override
     			public void run() {
     				randomAnimation(1);
     			}
@@ -102,12 +109,12 @@ public class MainActivity extends Activity {
     }
     
     private Handler handler = new Handler() {
-        @Override
+//        @Override
         public void handleMessage(Message msg) {
         	dog.setVisibility(8);
         	sideDog.setVisibility(0);
         	BitmapDrawable frame1 = (BitmapDrawable)getResources().
-            		getDrawable(R.drawable.cola1);
+            		getDrawable( R.drawable.cola1);
             BitmapDrawable frame2 = (BitmapDrawable)getResources().
             		getDrawable(R.drawable.cola2);
             BitmapDrawable frame3 = (BitmapDrawable)getResources().
@@ -124,17 +131,18 @@ public class MainActivity extends Activity {
         	sideDog.setBackgroundDrawable(mAnimation);
     		mAnimation.start();
     		mAnimation.setVisible(true, true);
+    		ladrido.start();
         }
     };
     
-    @Override
+//    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
     
-    @Override
+//    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	
         switch (item.getItemId()) {
