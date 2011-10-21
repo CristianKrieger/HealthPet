@@ -29,36 +29,38 @@ public final class R {
         public static final int indicador_felicidad=0x7f02000f;
         public static final int indicador_hambre=0x7f020010;
         public static final int indicador_limpieza=0x7f020011;
-        public static final int indicador_salud=0x7f020012;
-        public static final int orejas1=0x7f020013;
-        public static final int orejas2=0x7f020014;
+        public static final int orejas1=0x7f020012;
+        public static final int orejas2=0x7f020013;
+        public static final int status_perro=0x7f020014;
     }
     public static final class id {
-        public static final int ImageView1=0x7f07000b;
-        public static final int Sidedog=0x7f07000c;
-        public static final int bar1=0x7f070005;
-        public static final int bar2=0x7f070006;
-        public static final int bar3=0x7f070007;
-        public static final int bar4=0x7f070008;
-        public static final int bar5=0x7f070009;
-        public static final int bar6=0x7f07000a;
-        public static final int cleanbutton=0x7f070003;
-        public static final int close_session_menu=0x7f07000e;
-        public static final int configuration_menu=0x7f07000d;
-        public static final int foodbutton=0x7f070000;
-        public static final int happybutton=0x7f070002;
-        public static final int healthbutton=0x7f070001;
-        public static final int lowerBar=0x7f070004;
+        public static final int ImageView1=0x7f080009;
+        public static final int Sidedog=0x7f08000a;
+        public static final int bar1=0x7f080003;
+        public static final int bar2=0x7f080004;
+        public static final int bar3=0x7f080005;
+        public static final int bar4=0x7f080006;
+        public static final int bar5=0x7f080007;
+        public static final int bar6=0x7f080008;
+        public static final int close_session_menu=0x7f08000c;
+        public static final int configuration_menu=0x7f08000b;
+        public static final int indicadores=0x7f080001;
+        public static final int lowerBar=0x7f080002;
+        public static final int mainContainer=0x7f080000;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
+        public static final int details_dialog=0x7f030000;
+        public static final int main=0x7f030001;
     }
     public static final class menu {
-        public static final int menu=0x7f060000;
+        public static final int menu=0x7f070000;
+    }
+    public static final class raw {
+        public static final int dog=0x7f050000;
+        public static final int perronoche=0x7f050001;
     }
     public static final class string {
-        public static final int app_name=0x7f050001;
-        public static final int hello=0x7f050000;
+        public static final int app_name=0x7f060000;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;
