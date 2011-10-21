@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+       
+    <PreferenceCategory android:title="Privacy Settings">
+    	<CheckBoxPreference
+        	android:title="Share in Facebook"
+          	android:defaultValue="true"
+            android:summary="Allow to post messages through your Facebook account"
+            android:key="shareInFacebook" />
+    	
+    	<CheckBoxPreference
+        	android:title="Share in Twitter"
+          	android:defaultValue="true"
+            android:summary="Allow to post messages through your Twitter account"
+            android:key="shareInTwitter" />
+    	
+	<!-- 	<ListPreference
+            android:title="List Preference"
+            android:summary="This preference allows to select an item in a array"
+            android:key="listPref"
+            android:defaultValue="digiGreen"
+             android:entries="@array/listArray"
+            android:entryValues="@array/listValues" />  -->
+		
+        </PreferenceCategory>
+          
+</PreferenceScreen>

@@ -5,14 +5,19 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+
+import com.NullPointerException.HealthPet.UI.*;
 
 public class MainActivity extends Activity {
 	private long delay;
@@ -52,7 +57,7 @@ public class MainActivity extends Activity {
 		}, delay);
 		
 		img.setOnClickListener(new View.OnClickListener() {
-			@Override
+//			@Override
 			public void onClick(View v) {
 				
 				img.setBackgroundDrawable(mAnimation);
@@ -62,7 +67,7 @@ public class MainActivity extends Activity {
 		});
 		
 		img2.setOnClickListener(new View.OnClickListener() {
-			@Override
+//			@Override
 			public void onClick(View v) {
 				img2.setVisibility(8);
 				img.setVisibility(0);
@@ -121,4 +126,29 @@ public class MainActivity extends Activity {
     		mAnimation.setVisible(true, true);
         }
     };
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	
+        switch (item.getItemId()) {
+            case R.id.configuration_menu: 
+            	startActivity( new Intent (this, PreferencesActivity.class));
+            	break;
+            	
+            case R.id.close_session_menu:
+            	UI.showExitDialog(MainActivity.this);
+//            	finish();
+            	break;
+        }
+        return true;
+    }
 }
+
+
