@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -33,12 +34,20 @@ public class MainActivity extends Activity {
 	private Timer tmr2 = new Timer();
 	private View dog, sideDog;
 	private MediaPlayer ladrido, fondoNoche, fondoDia;
+<<<<<<< HEAD
 	
     @Override
+=======
+
+>>>>>>> ee6e0bf60da8d846e6c97107612b2b3fd3041384
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        ladrido = MediaPlayer.create(this, R.raw.dog);
+        fondoNoche = MediaPlayer.create(this, R.raw.perronoche);
+        fondoNoche.start();
         
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         ladrido = MediaPlayer.create(this, R.raw.dog);
@@ -69,7 +78,6 @@ public class MainActivity extends Activity {
 
 		delay = (long) r.nextInt(120000);
 		tmr.schedule(new TimerTask() {
-			@Override
 			public void run() {
 				randomAnimation(1);
 			}
@@ -125,7 +133,7 @@ public class MainActivity extends Activity {
     	switch(tmrNum){
     	case 1:
     		tmr2.schedule(new TimerTask() {
-    			@Override
+//    			@Override
     			public void run() {
     				randomAnimation(2);
     			}
@@ -133,7 +141,7 @@ public class MainActivity extends Activity {
     		break;
     	case 2:
     		tmr.schedule(new TimerTask() {
-    			@Override
+//    			@Override
     			public void run() {
     				randomAnimation(1);
     			}
@@ -144,12 +152,12 @@ public class MainActivity extends Activity {
     }
     
     private Handler handler = new Handler() {
-        @Override
+//        @Override
         public void handleMessage(Message msg) {
         	dog.setVisibility(8);
         	sideDog.setVisibility(0);
         	BitmapDrawable frame1 = (BitmapDrawable)getResources().
-            		getDrawable(R.drawable.cola1);
+            		getDrawable( R.drawable.cola1);
             BitmapDrawable frame2 = (BitmapDrawable)getResources().
             		getDrawable(R.drawable.cola2);
             BitmapDrawable frame3 = (BitmapDrawable)getResources().
@@ -170,6 +178,7 @@ public class MainActivity extends Activity {
         }
     };
     
+<<<<<<< HEAD
     @Override
 	protected void onStop() {
 		ladrido.stop();
@@ -180,13 +189,16 @@ public class MainActivity extends Activity {
 	}
 
 	@Override
+=======
+//    @Override
+>>>>>>> ee6e0bf60da8d846e6c97107612b2b3fd3041384
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
     
-    @Override
+//    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	
         switch (item.getItemId()) {
