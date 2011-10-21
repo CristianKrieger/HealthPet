@@ -34,12 +34,8 @@ public class MainActivity extends Activity {
 	private Timer tmr2 = new Timer();
 	private View dog, sideDog;
 	private MediaPlayer ladrido, fondoNoche, fondoDia;
-<<<<<<< HEAD
 	
-    @Override
-=======
-
->>>>>>> ee6e0bf60da8d846e6c97107612b2b3fd3041384
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -105,7 +101,6 @@ public class MainActivity extends Activity {
 		});
 		
 		pasear.setOnClickListener(new View.OnClickListener() {
-			@Override
 			public void onClick(View v) {
 				if(inside){
 					container.setBackgroundResource(R.drawable.fondo_2);
@@ -118,7 +113,6 @@ public class MainActivity extends Activity {
 		});
 		
 		indicadores.setOnClickListener(new View.OnClickListener() {
-			@Override
 			public void onClick(View v) {
 				final Dialog dialog = new Dialog(MainActivity.this);
 				dialog.setContentView(R.layout.details_dialog);
@@ -178,7 +172,6 @@ public class MainActivity extends Activity {
         }
     };
     
-<<<<<<< HEAD
     @Override
 	protected void onStop() {
 		ladrido.stop();
@@ -189,9 +182,6 @@ public class MainActivity extends Activity {
 	}
 
 	@Override
-=======
-//    @Override
->>>>>>> ee6e0bf60da8d846e6c97107612b2b3fd3041384
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);

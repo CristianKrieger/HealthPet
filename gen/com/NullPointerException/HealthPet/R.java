@@ -34,7 +34,6 @@ public final class R {
         public static final int status_perro=0x7f020014;
     }
     public static final class id {
-<<<<<<< HEAD
         public static final int ImageView1=0x7f080009;
         public static final int Sidedog=0x7f08000a;
         public static final int bar1=0x7f080003;
@@ -48,23 +47,6 @@ public final class R {
         public static final int indicadores=0x7f080001;
         public static final int lowerBar=0x7f080002;
         public static final int mainContainer=0x7f080000;
-=======
-        public static final int ImageView1=0x7f08000b;
-        public static final int Sidedog=0x7f08000c;
-        public static final int bar1=0x7f080005;
-        public static final int bar2=0x7f080006;
-        public static final int bar3=0x7f080007;
-        public static final int bar4=0x7f080008;
-        public static final int bar5=0x7f080009;
-        public static final int bar6=0x7f08000a;
-        public static final int cleanbutton=0x7f080003;
-        public static final int close_session_menu=0x7f08000e;
-        public static final int configuration_menu=0x7f08000d;
-        public static final int foodbutton=0x7f080000;
-        public static final int happybutton=0x7f080002;
-        public static final int healthbutton=0x7f080001;
-        public static final int lowerBar=0x7f080004;
->>>>>>> ee6e0bf60da8d846e6c97107612b2b3fd3041384
     }
     public static final class layout {
         public static final int details_dialog=0x7f030000;
