@@ -19,22 +19,32 @@ public final class R {
         public static final int icon=0x7f020005;
         public static final int icono_food=0x7f020006;
         public static final int icono_hueso=0x7f020007;
-        public static final int icono_popis=0x7f020008;
-        public static final int orejas1=0x7f020009;
-        public static final int orejas2=0x7f02000a;
+        public static final int icono_jabon=0x7f020008;
+        public static final int icono_jugar=0x7f020009;
+        public static final int icono_pasear=0x7f02000a;
+        public static final int icono_popis=0x7f02000b;
+        public static final int icono_zzz=0x7f02000c;
+        public static final int indicador_felicidad=0x7f02000d;
+        public static final int indicador_hambre=0x7f02000e;
+        public static final int indicador_limpieza=0x7f02000f;
+        public static final int indicador_salud=0x7f020010;
+        public static final int orejas1=0x7f020011;
+        public static final int orejas2=0x7f020012;
     }
     public static final class id {
-        public static final int ImageView1=0x7f050009;
-        public static final int Sidedog=0x7f05000a;
-        public static final int bar1=0x7f050006;
-        public static final int bar2=0x7f050007;
-        public static final int bar3=0x7f050008;
+        public static final int ImageView1=0x7f05000b;
+        public static final int Sidedog=0x7f05000c;
+        public static final int bar1=0x7f050005;
+        public static final int bar2=0x7f050006;
+        public static final int bar3=0x7f050007;
+        public static final int bar4=0x7f050008;
+        public static final int bar5=0x7f050009;
+        public static final int bar6=0x7f05000a;
         public static final int cleanbutton=0x7f050003;
         public static final int foodbutton=0x7f050000;
         public static final int happybutton=0x7f050002;
         public static final int healthbutton=0x7f050001;
-        public static final int lightbutton=0x7f050004;
-        public static final int lowerBar=0x7f050005;
+        public static final int lowerBar=0x7f050004;
     }
     public static final class layout {
         public static final int main=0x7f030000;
